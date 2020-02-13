@@ -1,0 +1,16 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: rudr
+  namespace: rudr
+  annotations:
+    fluxcd.io/ignore: "false"
+spec:
+  helmVersion: v3
+  releaseName: rudr
+  targetNamespace: rudr
+  chart:
+    git: git://github.com/oam-dev/rudr
+    ref: v1.0.0-alpha.1
+    path: charts/rudr
