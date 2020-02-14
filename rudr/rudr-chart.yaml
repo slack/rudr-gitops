@@ -11,6 +11,6 @@ spec:
   releaseName: rudr
   targetNamespace: rudr
   chart:
-    git: git://github.com/oam-dev/rudr
+    git: git://github.com/oam-dev/rudr.git
     ref: v1.0.0-alpha.1
     path: charts/rudr
