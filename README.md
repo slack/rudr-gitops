@@ -2,7 +2,7 @@
 ```console
 az k8sconfiguration create \
         --resource-group AzureArc \
-        --cluster-name widebody2 \
+        --cluster-name ${CLUSTER_NAME} \
         --name rudr-config \
         --operator-instance-name rudr-config \
         --operator-scope namespace \
@@ -11,4 +11,11 @@ az k8sconfiguration create \
         --enable-helm-operator true \
         --helm-operator-chart-version 0.6.0 \
         --repository-url git://github.com/slack/rudr-gitops.git
+```
+
+```console
+az k8sconfiguration delete
+        --resource-group AzureArc \
+        --cluster-name ${CLUSTER_NAME} \
+        --name rudr-config
 ```
